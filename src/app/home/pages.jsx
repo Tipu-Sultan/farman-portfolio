@@ -1,16 +1,26 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { ChevronDown, FileText, Mail, Phone, User, Book, Award, Briefcase } from "lucide-react"
+import React, { useState } from "react"
 import Image from "next/image"
+import { ChevronDown, FileText, Mail, Phone, User, Book, Award, Briefcase } from "lucide-react"
+import {
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  Input,
+  Textarea,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  ScrollArea,
+  Badge,
+  Separator
+} from "../components/input"
+import logo from '../../../public/logo1.png'
 
 export default function EnhancedPortfolio() {
   const [notes, setNotes] = useState([
@@ -41,21 +51,21 @@ export default function EnhancedPortfolio() {
           <Card className="overflow-hidden">
             <div className="relative h-[300px]">
               <Image
-                src="/placeholder.svg?height=300&width=1000"
+                src={logo}
                 alt="Pharmacy background"
                 layout="fill"
                 objectFit="cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <h1 className="text-4xl font-bold mb-2">Farman Ahmad Khan</h1>
+                  <h1 className="text-4xl font-bold mb-2">Farman Khan</h1>
                   <p className="text-xl">Aspiring Pharmacist | Dedicated Student</p>
                 </div>
               </div>
             </div>
             <CardContent className="mt-4">
-              <p className="text-lg text-center">
-                Welcome to my pharmacy portfolio! I'm passionate about improving healthcare through pharmaceutical science.
+              <p className="text-lg text-black text-center"> {/* Changed to text-black */}
+                Welcome to my pharmacy portfolio! I`m passionate about improving healthcare through pharmaceutical science.
               </p>
             </CardContent>
           </Card>
@@ -64,7 +74,9 @@ export default function EnhancedPortfolio() {
         <section id="about" className="mb-16">
           <Card>
             <CardHeader>
-              <CardTitle className="text-3xl font-bold">About Me</CardTitle>
+              <CardTitle className="text-3xl font-bold text-black"> {/* Changed to text-black */}
+                About Me
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center space-x-4">
@@ -76,8 +88,10 @@ export default function EnhancedPortfolio() {
                   className="rounded-full"
                 />
                 <div>
-                  <h2 className="text-2xl font-semibold">Farman Ahmad Khan</h2>
-                  <p className="text-muted-foreground">Pharmacy Student</p>
+                  <h2 className="text-2xl font-semibold text-black"> {/* Changed to text-black */}
+                    Farman Ahmad Khan
+                  </h2>
+                  <p className="text-gray-600">Pharmacy Student</p>
                   <div className="flex space-x-2 mt-2">
                     <Badge>Pharmacology</Badge>
                     <Badge>Clinical Research</Badge>
@@ -89,41 +103,45 @@ export default function EnhancedPortfolio() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">
+                    <CardTitle className="text-lg text-black"> {/* Changed to text-black */}
                       <Book className="inline-block mr-2" />
                       Education
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Bachelor of Pharmacy</p>
-                    <p className="text-sm text-muted-foreground">XYZ University, 2020-2024</p>
+                    <p className="text-black"> {/* Changed to text-black */}
+                      Bachelor of Pharmacy
+                    </p>
+                    <p className="text-sm text-gray-600">XYZ University, 2020-2024</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">
+                    <CardTitle className="text-lg text-black"> {/* Changed to text-black */}
                       <Award className="inline-block mr-2" />
                       Achievements
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="list-disc list-inside">
-                      <li>Dean's List 2022</li>
-                      <li>Research Assistant</li>
-                      <li>Pharmacy Club President</li>
+                      <li className="text-black">Dean`s List 2022</li> {/* Changed to text-black */}
+                      <li className="text-black">Research Assistant</li> {/* Changed to text-black */}
+                      <li className="text-black">Pharmacy Club President</li> {/* Changed to text-black */}
                     </ul>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">
+                    <CardTitle className="text-lg text-black"> {/* Changed to text-black */}
                       <Briefcase className="inline-block mr-2" />
                       Experience
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>Pharmacy Intern</p>
-                    <p className="text-sm text-muted-foreground">ABC Hospital, Summer 2023</p>
+                    <p className="text-black"> {/* Changed to text-black */}
+                      Pharmacy Intern
+                    </p>
+                    <p className="text-sm text-gray-600">ABC Hospital, Summer 2023</p>
                   </CardContent>
                 </Card>
               </div>
@@ -134,14 +152,22 @@ export default function EnhancedPortfolio() {
         <section id="notes" className="mb-16">
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-bold">Pharmacy Study Notes</CardTitle>
-              <CardDescription>Access and contribute to important pharmacy notes</CardDescription>
+              <CardTitle className="text-2xl font-bold text-black"> {/* Changed to text-black */}
+                Pharmacy Study Notes
+              </CardTitle>
+              <CardDescription className="text-black"> {/* Changed to text-black */}
+                Access and contribute to important pharmacy notes
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <Tabs defaultValue="view" className="w-full">
                 <TabsList>
-                  <TabsTrigger value="view">View Notes</TabsTrigger>
-                  <TabsTrigger value="add">Add Note</TabsTrigger>
+                  <TabsTrigger value="view" className="text-black"> {/* Changed to text-black */}
+                    View Notes
+                  </TabsTrigger>
+                  <TabsTrigger value="add" className="text-black"> {/* Changed to text-black */}
+                    Add Note
+                  </TabsTrigger>
                 </TabsList>
                 <TabsContent value="view">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -149,8 +175,8 @@ export default function EnhancedPortfolio() {
                       {notes.map((note) => (
                         <Button
                           key={note.id}
-                          variant="ghost"
-                          className="w-full justify-start mb-2"
+                          variant="link"
+                          className="w-full justify-start mb-2 text-black" // Changed to text-black
                           onClick={() => setActiveNote(note)}
                         >
                           <FileText className="mr-2 h-4 w-4" />
@@ -160,18 +186,22 @@ export default function EnhancedPortfolio() {
                     </ScrollArea>
                     <Card>
                       <CardHeader>
-                        <CardTitle>{activeNote ? activeNote.title : "Select a note"}</CardTitle>
+                        <CardTitle className="text-black"> {/* Changed to text-black */}
+                          {activeNote ? activeNote.title : "Select a note"}
+                        </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p>{activeNote ? activeNote.content : "Click on a note to view its content."}</p>
+                        <p className="text-black"> {/* Changed to text-black */}
+                          {activeNote ? activeNote.content : "Click on a note to view its content."}
+                        </p>
                       </CardContent>
                     </Card>
                   </div>
                 </TabsContent>
                 <TabsContent value="add">
                   <form className="space-y-4">
-                    <Input placeholder="Note Title" />
-                    <Textarea placeholder="Note Content" />
+                    <Input placeholder="Note Title" className="text-black" /> {/* Changed to text-black */}
+                    <Textarea placeholder="Note Content" className="text-black" /> {/* Changed to text-black */}
                     <Button>Add Note</Button>
                   </form>
                 </TabsContent>
@@ -180,25 +210,19 @@ export default function EnhancedPortfolio() {
           </Card>
         </section>
 
-        <section id="contact" className="mb-16">
+        <section id="contact">
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-bold">Contact Me</CardTitle>
-              <CardDescription>Get in touch for collaborations or inquiries</CardDescription>
+              <CardTitle className="text-2xl font-bold text-black"> {/* Changed to text-black */}
+                Contact Me
+              </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-center">
-                <Mail className="mr-2" />
-                <span>farmankhan12ab@gmail.com</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="mr-2" />
-                <span>7348158118</span>
-              </div>
+            <CardContent>
               <form className="space-y-4">
-                <Input placeholder="Your Name" />
-                <Input placeholder="Your Email" type="email" />
-                <Textarea placeholder="Your Message" />
+                <Input placeholder="Your Name" className="text-black" /> {/* Changed to text-black */}
+                <Input placeholder="Your Email" type="email" className="text-black" /> {/* Changed to text-black */}
+                <Input placeholder="Subject" className="text-black" /> {/* Changed to text-black */}
+                <Textarea placeholder="Message" className="text-black" /> {/* Changed to text-black */}
                 <Button>Send Message</Button>
               </form>
             </CardContent>
@@ -206,22 +230,10 @@ export default function EnhancedPortfolio() {
         </section>
       </main>
 
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-semibold">Farman Ahmad Khan</h3>
-              <p>Aspiring Pharmacist</p>
-            </div>
-            <div className="flex space-x-4">
-              <Button variant="link" className="text-white">LinkedIn</Button>
-              <Button variant="link" className="text-white">Twitter</Button>
-              <Button variant="link" className="text-white">GitHub</Button>
-            </div>
-          </div>
-          <Separator className="my-4" />
-          <p className="text-center">&copy; 2023 Farman Ahmad Khan. All rights reserved.</p>
-        </div>
+      <footer className="bg-white text-center py-4">
+        <p className="text-black"> {/* Changed to text-black */}
+          &copy; {new Date().getFullYear()} Farman Ahmad Khan. All rights reserved.
+        </p>
       </footer>
     </div>
   )
