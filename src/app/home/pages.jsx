@@ -21,6 +21,8 @@ import {
   Separator
 } from "../components/input"
 import logo from '../../../public/logo1.png'
+import farman from '../../../public/farman.jpg'
+
 
 export default function EnhancedPortfolio() {
   const [notes, setNotes] = useState([
@@ -81,8 +83,8 @@ export default function EnhancedPortfolio() {
             <CardContent className="space-y-4">
               <div className="flex items-center space-x-4">
                 <Image
-                  src="/placeholder.svg?height=150&width=150"
-                  alt="Farman Ahmad Khan"
+                  src={farman}
+                  alt="Farman Khan"
                   width={150}
                   height={150}
                   className="rounded-full"
